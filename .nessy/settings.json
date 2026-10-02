@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(\"/applications/google chrome.app/contents/macos/google chrome\" *)"
+    ]
+  },
+  "$version": 4
+}

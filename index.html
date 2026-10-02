@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ПОБЕГ — Погоня на Tiguan</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="game-container"></div>
+
+    <!-- HUD: шкала расстояния -->
+    <div id="hud" class="hidden">
+        <div id="bar-wrap">
+            <div id="bar-gradient"></div>
+            <div id="bar-fill"></div>
+            <div id="bar-labels">
+                <span class="bar-tag porsche">Porsche</span>
+                <span class="bar-tag vw">Volkswagen</span>
+            </div>
+            <div id="bar-pointer">
+                <div class="pointer-car">VW</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="danger-vignette"></div>
+    <div id="speed-hint">ЖМИ <b>SPACE</b></div>
+
+    <!-- Стартовая заставка -->
+    <div id="screen-start" class="overlay">
+        <div class="start-content">
+            <div class="game-title">
+                <span class="title-behind">ПОГОНЯ</span>
+                <h1>ПОБЕГ</h1>
+                <div class="subtitle">за рулём Volkswagen Tiguan</div>
+            </div>
+            <div class="start-cta">
+                <p class="instruction">
+                    Нажимай <b>SPACE</b> как можно быстрее, чтобы уйти от преследования!
+                </p>
+                <button id="btn-start" class="btn btn-primary">НАЧАТЬ</button>
+                <div class="credits">Ты — за рулём Tiguan. Сзади — две женщины на красном Porsche Cayenne. Не дай им догнать тебя.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Экран победы -->
+    <div id="screen-win" class="overlay hidden">
+        <div class="end-content">
+            <h1 class="end-title win">ТЫ УЕХАЛ!</h1>
+            <p class="end-sub">Ты оторвался от преследования. Porsche остался позади.</p>
+            <button id="btn-restart" class="btn btn-primary">ИГРАТЬ СНОВА</button>
+        </div>
+    </div>
+
+    <!-- Экран поражения -->
+    <div id="screen-lose" class="overlay hidden">
+        <div class="end-content">
+            <h1 class="end-title lose">ТЕБЯ ДОГНАЛИ!</h1>
+            <p class="end-sub">Красный Porsche Cayenne настиг тебя.</p>
+            <button id="btn-retry" class="btn btn-danger">ПОПРОБОВАТЬ СНОВА</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
